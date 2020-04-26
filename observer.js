@@ -1,3 +1,9 @@
+/* Arrow functions can act as Constructors because To be a constructor, a function object must have a [[Construct]] internal method.
+
+Functions created with the function keyword are constructors, as are some built-in functions such as Date. These are the functions you can use with new.
+
+Other function objects do not have a [[Construct]] internal method. These include arrow functions. So you can't use new with these. This makes sense since you can't set the this value of an arrow function.
+*/
 const MoneyHeist = function() {
   this.viewers = [];
   const subscribe = user => {
